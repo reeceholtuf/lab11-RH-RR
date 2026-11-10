@@ -12,10 +12,10 @@ One function per operation, in order.
 import math
 
 def square_root(a):
-    try:
-        return math.sqrt(a)
-    except ValueError:
-        return 0
+    if a < 0:
+        raise ValueError
+    return math.sqrt(a)
+
 
 def hypotenuse(a, b):
     return math.hypot(a, b)
@@ -30,16 +30,14 @@ def multiply(a, b):
     return a * b
 
 def divide(a, b):
-    try:
-        return a / b
-    except ZeroDivisionError:
-        return 0
+    if a == 0:
+        raise ValueError
+    return b / a
 
 def logarithm(a, b):
-    try:
-        return math.log(b, a)
-    except ValueError:
-        return 0
+    if a <= 0 or a == 1 or b<=0:
+        raise ValueError
+    return a * math.log(b)
 
 def exponent(a, b):
     return a ** b
