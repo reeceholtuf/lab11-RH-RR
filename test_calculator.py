@@ -1,3 +1,7 @@
+# https://github.com/reeceholtuf/lab11-RH-RR
+# Partner 1: Reece Holt
+# Partner 2: Rohith Rayudu
+
 import unittest
 from calculator import *
 
